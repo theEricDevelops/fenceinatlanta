@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import Gallery from '../components/Gallery.astro';
+
+const galleryImages = [
+  {
+    src: "/gallery/repair-1.jpg",
+    alt: "Fence post replacement",
+    title: "Post Replacement"
+  },
+  {
+    src: "/gallery/repair-2.jpg",
+    alt: "Panel repair work",
+    title: "Panel Repair"
+  },
+  {
+    src: "/gallery/repair-3.jpg",
+    alt: "Gate repair and realignment",
+    title: "Gate Repair"
+  },
+  {
+    src: "/gallery/repair-4.jpg",
+    alt: "Storm damage restoration",
+    title: "Storm Damage Repair"
+  },
+  {
+    src: "/gallery/repair-5.jpg",
+    alt: "Hardware replacement",
+    title: "Hardware Replacement"
+  },
+  {
+    src: "/gallery/repair-6.jpg",
+    alt: "Fence restoration project",
+    title: "Complete Restoration"
+  }
+];
+---
+
+<Layout title="Fence Repair Services - Atlanta Fencing">
+	<main>
+		<section class="pt-32 pb-20 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4">
+				<h1 class="text-5xl font-bold mb-8">Fence Repair Services</h1>
+				<p class="text-xl text-gray-600 mb-12">Expert fence repair services to restore and maintain your fencing investment. We handle repairs for all types of fences and materials.</p>
+				
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+					<div>
+						<h2 class="text-2xl font-semibold mb-4">Common Repair Services</h2>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Post replacement and reinforcement</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Panel and picket replacement</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Gate repairs and realignment</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Storm damage restoration</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Hardware replacement</span>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h2 class="text-2xl font-semibold mb-4">Our Process</h2>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">1.</span>
+								<span>Thorough inspection and assessment</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">2.</span>
+								<span>Detailed repair quote</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">3.</span>
+								<span>Professional repair execution</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">4.</span>
+								<span>Quality check and cleanup</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">5.</span>
+								<span>Final inspection with customer</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="bg-white p-8 rounded-lg shadow-md mb-12">
+					<h2 class="text-2xl font-semibold mb-4">Why Choose Our Repair Services?</h2>
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+						<div>
+							<h3 class="text-xl font-semibold mb-2">Fast Response</h3>
+							<p class="text-gray-600">Quick response times for urgent repair needs.</p>
+						</div>
+						<div>
+							<h3 class="text-xl font-semibold mb-2">Skilled Technicians</h3>
+							<p class="text-gray-600">Experienced professionals who know fencing.</p>
+						</div>
+						<div>
+							<h3 class="text-xl font-semibold mb-2">Quality Materials</h3>
+							<p class="text-gray-600">We use only matching, high-quality materials.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<Gallery images={galleryImages} />
+		<QuoteForm />
+	</main>
+</Layout>

@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import Gallery from '../components/Gallery.astro';
+
+const galleryImages = [
+  {
+    src: "/gallery/residential-1.jpg",
+    alt: "Modern privacy fence installation",
+    title: "Modern Privacy Fence"
+  },
+  {
+    src: "/gallery/residential-2.jpg",
+    alt: "Classic picket fence in front yard",
+    title: "Classic Picket Fence"
+  },
+  {
+    src: "/gallery/residential-3.jpg",
+    alt: "Pool safety fence installation",
+    title: "Pool Safety Fence"
+  },
+  {
+    src: "/gallery/residential-4.jpg",
+    alt: "Decorative garden fence",
+    title: "Garden Fence"
+  },
+  {
+    src: "/gallery/residential-5.jpg",
+    alt: "Security fence with gate",
+    title: "Security Fence"
+  },
+  {
+    src: "/gallery/residential-6.jpg",
+    alt: "Custom wood fence design",
+    title: "Custom Wood Fence"
+  }
+];
+---
+
+<Layout title="Residential Fencing Services - Atlanta Fencing">
+	<main>
+		<section class="pt-32 pb-20 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4">
+				<h1 class="text-5xl font-bold mb-8">Residential Fencing Solutions</h1>
+				<p class="text-xl text-gray-600 mb-12">Transform your property with our custom residential fencing solutions. We offer a wide range of styles and materials to match your home's aesthetic and security needs.</p>
+				
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+					<div>
+						<h2 class="text-2xl font-semibold mb-4">Our Residential Services</h2>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Privacy fences for backyard sanctuaries</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Decorative picket fences for front yards</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Pool safety fencing</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Garden and landscape fencing</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Security fencing solutions</span>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h2 class="text-2xl font-semibold mb-4">Available Materials</h2>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Premium wood fencing (cedar, pine)</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Vinyl fencing systems</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Aluminum and steel options</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Composite materials</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Wrought iron fencing</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="bg-white p-8 rounded-lg shadow-md mb-12">
+					<h2 class="text-2xl font-semibold mb-4">Why Choose Us for Your Residential Fencing?</h2>
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+						<div>
+							<h3 class="text-xl font-semibold mb-2">Expert Installation</h3>
+							<p class="text-gray-600">Our skilled team ensures proper installation for long-lasting results.</p>
+						</div>
+						<div>
+							<h3 class="text-xl font-semibold mb-2">Custom Design</h3>
+							<p class="text-gray-600">We work with you to create the perfect fence for your property.</p>
+						</div>
+						<div>
+							<h3 class="text-xl font-semibold mb-2">Quality Materials</h3>
+							<p class="text-gray-600">Only the finest materials that withstand Georgia weather.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<Gallery images={galleryImages} />
+		<QuoteForm />
+	</main>
+</Layout>

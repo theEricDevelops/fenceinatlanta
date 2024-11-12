@@ -1,0 +1,42 @@
+---
+const services = [
+  {
+    title: "Residential Fencing",
+    link: "/residential",
+    description: "Custom fencing solutions for homes, including privacy, picket, and security fences",
+    icon: "🏠"
+  },
+  {
+    title: "Commercial Fencing",
+    link: "/commercial",
+    description: "Heavy-duty fencing for businesses, warehouses, and industrial properties",
+    icon: "🏢"
+  },
+  {
+    title: "Fence Repair",
+    link: "/repair",
+    description: "Expert repair services to maintain and restore your existing fence",
+    icon: "🔧"
+  },
+  {
+    title: "Custom Gates",
+    link: "/gates",
+    description: "Automated and manual gates designed to match your fence perfectly",
+    icon: "🚪"
+  }
+];
+---
+<section class="py-20 bg-gray-50" id="services">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {services.map(service => (
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="text-4xl mb-4">{service.icon}</div>
+          <h3 class="text-xl font-semibold mb-2"><a href={service.link}>{service.title}</a></h3>
+          <p class="text-gray-600">{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

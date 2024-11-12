@@ -1,0 +1,100 @@
+---
+import { useState } from 'preact/hooks';
+---
+
+<section class="relative bg-[url('/hero-fence.jpg')] bg-cover bg-center min-h-[90vh]">
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="relative max-w-7xl mx-auto px-4 py-20 min-h-[90vh] flex items-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full items-center">
+      <div class="text-white">
+        <h1 class="text-5xl md:text-6xl font-bold mb-4">Atlanta's Premier Fencing Contractor</h1>
+        <p class="text-xl md:text-2xl mb-8">Professional fence installation and repair services for residential and commercial properties</p>
+        <ul class="space-y-3 text-lg">
+          <li class="flex items-center">
+            <span class="text-orange-400 mr-2">✓</span> Free Consultations
+          </li>
+          <li class="flex items-center">
+            <span class="text-orange-400 mr-2">✓</span> Licensed & Insured
+          </li>
+          <li class="flex items-center">
+            <span class="text-orange-400 mr-2">✓</span> Same-Day Estimates
+          </li>
+        </ul>
+      </div>
+      
+      <div class="bg-white p-8 rounded-lg shadow-xl">
+        <div id="formContent">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">Get Your Free Estimate</h2>
+          <form id="estimateForm" class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Name</label>
+              <input 
+                type="text" 
+                name="name"
+                required
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+              >
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Phone</label>
+              <input 
+                type="tel" 
+                name="phone"
+                required
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+              >
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Email</label>
+              <input 
+                type="email" 
+                name="email"
+                required
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+              >
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Project Type</label>
+              <select 
+                name="projectType"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+              >
+                <option>Residential Fence</option>
+                <option>Commercial Fence</option>
+                <option>Fence Repair</option>
+                <option>Custom Gate</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Message</label>
+              <textarea 
+                name="message"
+                rows="3" 
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+                placeholder="Tell us about your project..."
+              ></textarea>
+            </div>
+            <button 
+              type="submit" 
+              class="w-full bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg text-lg font-semibold transition-colors"
+            >
+              Request Free Estimate
+            </button>
+          </form>
+        </div>
+        <div id="successMessage" class="hidden">
+          <div class="text-center py-8">
+            <div class="text-5xl mb-4">🎉</div>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Thank You!</h2>
+            <p class="text-gray-600">Your estimate request has been submitted successfully. We'll contact you within 24 hours to discuss your project.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { initEstimateForm } from '../lib/estimateForm';
+  initEstimateForm('estimateForm', 'formContent', 'successMessage');
+</script>

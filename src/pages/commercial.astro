@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import Gallery from '../components/Gallery.astro';
+
+const galleryImages = [
+  {
+    src: "/gallery/commercial-1.jpg",
+    alt: "Industrial security fence installation",
+    title: "Industrial Security Fence"
+  },
+  {
+    src: "/gallery/commercial-2.jpg",
+    alt: "Storage facility perimeter fencing",
+    title: "Storage Facility Fence"
+  },
+  {
+    src: "/gallery/commercial-3.jpg",
+    alt: "Retail property security fence",
+    title: "Retail Security Fence"
+  },
+  {
+    src: "/gallery/commercial-4.jpg",
+    alt: "School perimeter fencing",
+    title: "School Perimeter Fence"
+  },
+  {
+    src: "/gallery/commercial-5.jpg",
+    alt: "High-security gate system",
+    title: "Security Gate System"
+  },
+  {
+    src: "/gallery/commercial-6.jpg",
+    alt: "Construction site temporary fencing",
+    title: "Temporary Construction Fence"
+  }
+];
+---
+
+<Layout title="Commercial Fencing Services - Atlanta Fencing">
+	<main>
+		<section class="pt-32 pb-20 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4">
+				<h1 class="text-5xl font-bold mb-8">Commercial Fencing Solutions</h1>
+				<p class="text-xl text-gray-600 mb-12">Secure your business with our professional commercial fencing solutions. We provide durable, high-security fencing options for businesses of all sizes.</p>
+				
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+					<div>
+						<h2 class="text-2xl font-semibold mb-4">Commercial Applications</h2>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Industrial security fencing</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Storage facility perimeter fencing</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Retail property fencing</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Construction site temporary fencing</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>School and institution fencing</span>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h2 class="text-2xl font-semibold mb-4">Security Features</h2>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Anti-climb modifications</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Electronic access control integration</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>High-security gate systems</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Surveillance system compatibility</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Barbed wire options</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="bg-white p-8 rounded-lg shadow-md mb-12">
+					<h2 class="text-2xl font-semibold mb-4">Commercial Fencing Benefits</h2>
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+						<div>
+							<h3 class="text-xl font-semibold mb-2">Enhanced Security</h3>
+							<p class="text-gray-600">Protect your assets with robust security features.</p>
+						</div>
+						<div>
+							<h3 class="text-xl font-semibold mb-2">Professional Image</h3>
+							<p class="text-gray-600">Improve your property's appearance and value.</p>
+						</div>
+						<div>
+							<h3 class="text-xl font-semibold mb-2">Durability</h3>
+							<p class="text-gray-600">Built to last with minimal maintenance required.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<Gallery images={galleryImages} />
+		<QuoteForm />
+	</main>
+</Layout>

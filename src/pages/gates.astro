@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import Gallery from '../components/Gallery.astro';
+
+const galleryImages = [
+  {
+    src: "/gallery/gates-1.jpg",
+    alt: "Single swing gate installation",
+    title: "Single Swing Gate"
+  },
+  {
+    src: "/gallery/gates-2.jpg",
+    alt: "Double swing gate for driveway",
+    title: "Double Swing Gate"
+  },
+  {
+    src: "/gallery/gates-3.jpg",
+    alt: "Sliding gate system",
+    title: "Sliding Gate"
+  },
+  {
+    src: "/gallery/gates-4.jpg",
+    alt: "Automated driveway gate",
+    title: "Automated Gate"
+  },
+  {
+    src: "/gallery/gates-5.jpg",
+    alt: "Decorative pedestrian gate",
+    title: "Pedestrian Gate"
+  },
+  {
+    src: "/gallery/gates-6.jpg",
+    alt: "Custom gate design",
+    title: "Custom Gate"
+  }
+];
+---
+
+<Layout title="Custom Gates - Atlanta Fencing">
+	<main>
+		<section class="pt-32 pb-20 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4">
+				<h1 class="text-5xl font-bold mb-8">Custom Gate Solutions</h1>
+				<p class="text-xl text-gray-600 mb-12">Beautiful, functional gates designed to complement your fence and property. From simple garden gates to automated driveway entrances.</p>
+				
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+					<div>
+						<h2 class="text-2xl font-semibold mb-4">Gate Types</h2>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Single swing gates</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Double swing gates</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Sliding gates</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Automated driveway gates</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Pedestrian gates</span>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h2 class="text-2xl font-semibold mb-4">Automation Options</h2>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Remote control operation</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Keypad entry systems</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Smartphone control</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Intercom integration</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-orange-500 mr-2">✓</span>
+								<span>Safety sensors</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				 <boltAction type="file" filePath="src/pages/gates.astro">				<div class="bg-white p-8 rounded-lg shadow-md mb-12">
+					<h2 class="text-2xl font-semibold mb-4">Custom Gate Features</h2>
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+						<div>
+							<h3 class="text-xl font-semibold mb-2">Design Options</h3>
+							<p class="text-gray-600">Customizable styles to match your property.</p>
+						</div>
+						<div>
+							<h3 class="text-xl font-semibold mb-2">Security</h3>
+							<p class="text-gray-600">Advanced locking and access control systems.</p>
+						</div>
+						<div>
+							<h3 class="text-xl font-semibold mb-2">Durability</h3>
+							<p class="text-gray-600">Built with premium materials for longevity.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<Gallery images={galleryImages} />
+		<QuoteForm />
+	</main>
+</Layout>
